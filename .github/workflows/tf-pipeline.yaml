@@ -26,12 +26,15 @@ jobs:
         run: terraform init
 
       - name: Terraform Format
+        working-directory: terraform/
         run: terraform fmt
 
       - name: Terraform Validate
+        working-directory: terraform/
         run: terraform validate
 
       - name: Terraform Plan
+        working-directory: terraform/
         run: terraform plan
 
   terraform-apply:
@@ -50,10 +53,13 @@ jobs:
         run: terraform init
 
       - name: Terraform Format
+        working-directory: terraform/
         run: terraform fmt
 
       - name: Terraform Validate
+        working-directory: terraform/
         run: terraform validate
 
       - name: Terraform Apply
+        working-directory: terraform/
         run: terraform apply -auto-approve
