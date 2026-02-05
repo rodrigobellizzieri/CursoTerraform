@@ -3,6 +3,6 @@ resource "aws_instance" "instance" {
   instance_type = "t3.micro"
 
   tags = {
-    Name = "HelloWorld-${var.ambiente}"
+    Name = "minha-instancia-${var.ambiente}"
   }
 }
