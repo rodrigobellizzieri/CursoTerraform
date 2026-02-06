@@ -1,4 +1,4 @@
-module "web" {
+module "web-server" {
   source = "./modules/web-server"
 
   name          = "web-dev"
@@ -9,7 +9,8 @@ module "web" {
 
   user_data = <<-EOF
     #!/bin/bash
-    yum install -y httpd
+    apt-get update
+    apt-get install -y httpd
     systemctl start httpd
     systemctl enable httpd
     echo "<h1>Infra criada via módulo - Curso Terraform Rodrigo Bellizzieri</h1>" > /var/www/html/index.html
