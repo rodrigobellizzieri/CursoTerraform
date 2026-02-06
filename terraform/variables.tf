@@ -1,4 +1,4 @@
-variable "ambiente" {
-  type        = string
-  description = "Environment"
-}
+# variable "ambiente" {
+#   type        = string
+#   description = "Environment"
+# }
